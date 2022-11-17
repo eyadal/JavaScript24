@@ -1,8 +1,10 @@
 window.onload = function () {
-  let sec = 00
+  let secs = 00
   let tens = 00
-  let appendSecs = document.getElementById('sec')
+  let mins = 00
+  let appendSecs = document.getElementById('secs')
   let appendTens = document.getElementById('tens')
+  let appendMins = document.getElementById('mins')
   let btnStart = document.getElementById('btn-start')
   let btnStop = document.getElementById('btn-stop')
   let btnReset = document.getElementById('btn-reset')
@@ -13,7 +15,7 @@ window.onload = function () {
     btnStop.setAttribute('class', 'black')
     clearInterval(interval)
     console.log(interval)
-    interval = setInterval(startTimer, 10)
+    interval = setInterval(startTimer, 1)
   }
 
   btnStop.onclick = function () {
@@ -25,9 +27,11 @@ window.onload = function () {
     btnStart.setAttribute('class', 'black')
     btnStop.setAttribute('class', 'black')
     clearInterval(interval)
-    sec = '00'
+    mins = '00'
+    secs = '00'
     tens = '00'
-    appendSecs.innerHTML = sec
+    appendMins.innerHTML = mins
+    appendSecs.innerHTML = secs
     appendTens.innerHTML = tens
   }
 
@@ -43,26 +47,21 @@ window.onload = function () {
 
     if (tens > 99) {
       console.log('seconds')
-      sec++
+      secs++
       tens = 0
-      appendSecs.innerHTML = '0' + sec
+      appendSecs.innerHTML = '0' + secs
       appendTens.innerHTML = '0' + 0
     }
-    if (sec > 9) {
-      appendSecs.innerHTML = sec
+    if (secs > 9) {
+      appendSecs.innerHTML = secs
     }
-
-    if (sec < 10) {
-      appendSecs.setAttribute('class', 'black')
-    }
-    if (sec > 10) {
-      appendSecs.setAttribute('class', 'green')
-    }
-    if (sec > 15) {
-      appendSecs.setAttribute('class', 'yellow')
-    }
-    if (sec > 20) {
-      appendSecs.setAttribute('class', 'red')
+    if (secs > 60) {
+      mins++
+      secs = 0
+      tens = 0
+      appendMins.innerHTML = '0' + mins
+      appendSecs.innerHTML = '0' + 0
+      appendTens.innerHTML = '0' + 0
     }
   }
 }
