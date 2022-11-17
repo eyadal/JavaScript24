@@ -1,9 +1,20 @@
 /* Variabes */
+.red {
+  color: red;
+}
+
+.green {
+  color: greenyellow;
+}
+
+.black {
+  color: black;
+}
+
 /* Mixin's */
 body {
   background: #306f93;
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
-    Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   height: 100%;
 }
 
@@ -14,27 +25,20 @@ body {
   flex: 1;
   text-align: center;
   align-items: center;
-
   justify-content: center;
-}
-.stop-watch-content {
-  border: 2px solid #fff;
-  padding: 15px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 2.6em;
   text-transform: uppercase;
 }
 
-#mins,
-#secs,
-#tens {
-  font-size: 3em;
+.big-font {
+  font-size: 2em;
 }
 
 button {

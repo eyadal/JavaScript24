@@ -1,9 +1,17 @@
 /* Variabes */
+.red {
+  color: red;
+}
+.green {
+  color: greenyellow;
+}
+.black {
+  color: black;
+}
 $blue: #306f93;
 $grey: #f3f3f3;
 $white: #fff;
 $base-color: $blue;
-
 /* Mixin's */
 @mixin transition {
   -webkit-transition: all 0.5s ease-in-out;
@@ -25,10 +33,13 @@ body {
 }
 
 .wrapper {
-  width: 800px;
-  margin: 30px auto;
-  color: $white;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -40,9 +51,7 @@ h3 {
   text-transform: uppercase;
 }
 
-#mins,
-#secs,
-#tens {
+.big-font{
   font-size: 2em;
 }
 

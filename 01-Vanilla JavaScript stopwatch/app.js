@@ -12,20 +12,20 @@ window.onload = function () {
 
   btnStart.onclick = function () {
     btnStart.setAttribute('class', 'green')
-    btnStop.setAttribute('class', 'black')
+    btnStop.setAttribute('class', 'white')
     clearInterval(interval)
     console.log(interval)
-    interval = setInterval(startTimer, 1)
+    interval = setInterval(startTimer, 10)
   }
 
   btnStop.onclick = function () {
     btnStop.setAttribute('class', 'red')
-    btnStart.setAttribute('class', 'black')
+    btnStart.setAttribute('class', 'white')
     clearInterval(interval)
   }
   btnReset.onclick = function () {
-    btnStart.setAttribute('class', 'black')
-    btnStop.setAttribute('class', 'black')
+    btnStart.setAttribute('class', 'white')
+    btnStop.setAttribute('class', 'white')
     clearInterval(interval)
     mins = '00'
     secs = '00'
