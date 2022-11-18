@@ -55,5 +55,12 @@ for (let i = 0; i < operator.length; i++) {
         e.target.innerHTML
       input.innerHTML = newString
     }
+    if (currentString.length == 0) {
+      // if first key pressed is an operator, don't do anything
+      console.log('enter a number first')
+    } else {
+      //else just add the operator pressed to the input
+      input.innerHTML += e.target.innerHTML
+    }
   })
 }
