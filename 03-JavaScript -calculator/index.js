@@ -69,4 +69,7 @@ for (let i = 0; i < operator.length; i++) {
 result.addEventListener('click', function () {
   // this is the string that we will be processing eg. -10+26+33-56*34/23
   const inputString = input.innerHTML
+
+  // forming an array of numbers. eg for above string it will be: numbers = ["10", "26", "33", "56", "34", "23"]
+  const numbers = inputString.split(/\+|\-|\×|\÷/g)
 })
