@@ -8,6 +8,9 @@ const input = document.getElementById('input'), // input/output button
   // adding click handlers to number buttons
   for (let i = 0; i < number.length; i++){
     number[i].addEventListener('click', function(e){
-        
-    })
+
+    // Storing current input string and its last character in variables - used later
+    const currentString = input.innerHTML;
+    const lastChar = currentString[currentString.length - 1];
+})
   }
