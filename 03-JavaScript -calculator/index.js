@@ -26,13 +26,34 @@ for (let i = 0; i < number.length; i++) {
       // we need to keep on adding to the string for next operation
       resultDisplayed = false
       input.innerHTML += e.target.innerHTML
+    } else {
+      // if result is currently displayed and user pressed a number
+      // we need clear the input string and add the new input to start the new operation
+      resultDisplayed = false
+      input.innerHTML = ''
+      input.innerHTML += e.target.innerHTML
     }
-    else{
-        // if result is currently displayed and user pressed a number
-        // we need clear the input string and add the new input to start the new operation
-        resultDisplayed =false;
-        input.innerHTML = '';
-        input.innerHTML += e.target.innerHTML;
+  })
+}
+
+// adding click handlers to number buttons
+for (let i = 0; i < operator.length; i++) {
+  operator[i].addEventListener('click', function (e) {
+    // storing current input string and its last character in variables - used later
+    const currentString = input.innerHTML
+    const lastChar = currentString[currentString.length - 1]
+
+    // if last character entered is an operator, replace it with the currently pressed one
+    if (
+      lastChar === '+' ||
+      lastChar === '-' ||
+      lastChar === 'x' ||
+      lastChar === '÷'
+    ) {
+      const newString =
+        currentString.substring(0, currentString.length - 1) +
+        e.target.innerHTML
+      input.innerHTML = newString
     }
   })
 }
