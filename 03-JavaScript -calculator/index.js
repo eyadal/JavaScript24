@@ -27,5 +27,12 @@ for (let i = 0; i < number.length; i++) {
       resultDisplayed = false
       input.innerHTML += e.target.innerHTML
     }
+    else{
+        // if result is currently displayed and user pressed a number
+        // we need clear the input string and add the new input to start the new operation
+        resultDisplayed =false;
+        input.innerHTML = '';
+        input.innerHTML += e.target.innerHTML;
+    }
   })
 }
