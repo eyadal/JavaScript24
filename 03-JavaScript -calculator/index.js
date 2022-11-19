@@ -72,4 +72,13 @@ result.addEventListener('click', function () {
 
   // forming an array of numbers. eg for above string it will be: numbers = ["10", "26", "33", "56", "34", "23"]
   const numbers = inputString.split(/\+|\-|\×|\÷/g)
+
+  // forming an array of operators. for above string it will be: operators = ["+", "+", "-", "*", "/"]
+  // first we replace all the numbers and dot with empty string and then split
+
+  const operators = inputString.replace(/[0-9]|\./g, '').split('')
+  console.log(inputString)
+  console.log(operators)
+  console.log(numbers)
+  console.log('----------------------------')
 })
