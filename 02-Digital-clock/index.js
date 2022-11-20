@@ -5,22 +5,14 @@ function showTime() {
   let hour = now.getHours() // 0 - 23
   let minutes = now.getMinutes() // 0 - 59
   let seconds = now.getSeconds() // 0 - 59
-  let am_pm = ' AM'
 
-  if (hour >= 12) {
-    hour -= 12
-    am_pm = 'PM'
-  }
-
-  if (hour <= 11) {
-    hour += 12
-    am_pm = 'AM'
+  let addZero = function (digits) {
+    return digits < 10 ? '0'+ digits : digits
   }
   const body = `
- <div>${hour}:</div>
- <div>${minutes}:</div>
- <div>${seconds}:</div>
- <div class="am_pm">${am_pm}</div>
+    <div>${addZero(hour)}:</div>
+    <div>${addZero(minutes)}:</div>
+    <div>${addZero(seconds)}</div>
  `
   myClock.innerHTML = body
 }
